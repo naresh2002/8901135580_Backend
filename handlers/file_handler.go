@@ -130,7 +130,7 @@ func (f *FileHandler) UploadFile(rw http.ResponseWriter, req *http.Request) {
 		"message":       "File uploaded successfully",
 		"file_id":       fmt.Sprintf("%d", fileID),
 		"file_path":     filePath,
-		"temporary_url": fmt.Sprintf("http://localhost:8000/file/%s", tempURL),
+		"temporary_url": fmt.Sprintf("http://localhost:8000/file?url=%s", tempURL),
 		"expires_at":    expireAt.Format(time.RFC3339),
 	})
 }
