@@ -160,16 +160,12 @@ curl -X POST http://localhost:8000/upload \
 
 ---
 
-### **4. Access File (Public URL)** [GET]  
+### **4. Access File (Public URL)**  
 Fetches the file using the generated **temporary URL**.
 
-**Endpoint:**  
-```
-GET http://localhost:8000/public/{temp_url}
-```
-**cURL Command:**
-```bash
-curl -X GET http://localhost:8000/file?url=abcd1234xyz --output downloaded_file.pdf
+Enter temprary_url in your browser's search bar  
+```plaintext
+http://localhost:8000/file?url=abcd1234xyz
 ```
 ✅ **Note:** This allows **anyone** to access the file as long as it hasn't expired.
 
